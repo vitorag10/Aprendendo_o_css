@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 13 HTML</title>
+</head>
+<body>
+    <h1>Exemplo 13 HTML - Uso do Input</h1>
+    <form action="paginaDestino.php" method="get">
+        <div>
+            <label for="">Nome</label>
+            <input type="text" name="txtNomeName" id="txtNome">
+        </div>
+        <br>
+        <div>
+            <label for="">Data de Nascimento</label>
+            <input type="date" name="txtDataNascimentoName" id="txtDataNascimento">
+        </div>
+        <br>
+        <div>
+            <label for="">Selecione o Estado Civil</label>
+            <select name="cboEstadoCivilName" id="cboEstadoCivil">
+                <option value="">Solteiro</option></select>
+                <option value="">Casado</option></select>
+                <option value="">Viuvo</option></select>
+                <option value="">União EStável</option></select>
+                <option value="">Outros</option></select>
+            </select>
+                <div>
+                <br>
+                </div>
+                <label for="">Selecione sua faixa salarial</label>
+                <input type="range" name="rgFaixaName" id="rgFaixa" min="0" max = "20" step="2">
+        </div>
+        <br>
+        <div>
+            <label for="">Pessoas Cadastradas</label>
+            <table border="solid">
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nascimento</th>
+                    <th>Estado Civil</th>
+                </tr>
+                <tr>
+                    <td>JOSE DAS COUVES</td>
+                    <td>01/01/1975</td>
+                    <td>CASADO</td>
+                <tr>
+                    <td>MARIA DAS COUVES</td>
+                    <td>01/01/1975</td>
+                     <td>CASADO</td>
+                 <tr>
+                     <td>PEDRO DAS COUVES</td>
+                    <td>01/01/1975</td>
+                    <td>CASADO</td>
+                <tr>
+                    <td>TONI DAS COUVES</td>
+                    <td>01/01/1975</td>
+                    <td>CASADO</td>
+                <tr>
+                    <td>MARIO DAS COUVES</td>
+                    <td>01/01/1975</td>
+                    <td>CASADO</td>    
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
