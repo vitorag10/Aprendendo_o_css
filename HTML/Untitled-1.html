@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desenhar retangulo</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function drawRectangle(event) {
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.rect(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop, 50, 50);
+        ctx.stroke();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Desenhar retângulo</h1>
+    <canvas id="canvas" width="400" height="400" onclick="drawRectangle(event)"></canvas>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilheteria do Titanic - Página Inicial</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: black;
+        }
+        header {
+            background-color: darkgreen;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 98%;
+        }
+        header li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+        header a:hover {
+            color: rgb(205, 199, 199);
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 50%;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 56%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+        }
+        #mensagemConfirmacao {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #D4EDDA;
+            border: 1px solid #C3E6CB;
+            color: black;
+        }
+        #mensagemConfirmacao h2 {
+            color: black;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: darkgreen;
+            padding: 20px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        footer li,p {
+            color: white;
+        }
+        p{
+            color:black
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a href="Exercicio_43.html">Página Inícial</a></li>
+                <li><a href="SobreTitanic.html">Sobre</a></li>
+                <li><a href="pg_tickets, programas e valores.html"> Página com os tickets, programas e valores</a></li>
+                <li><a href="Pg_cadastro.html"> Página de cadastro do cliente</a></li>
+                <li><a href="Pg_compra.html"> Página de compra</a></li>
+                <li><a href="Pg_login.html">Página de Login</a></li>
+               
+            </ul>
+        </div>
+    </header>
+    <h1>Compra do bilhete</h1>
+    <script>
+        function enviarFormulario() {
+            var meioPagamento = document.getElementById('meioPagamento').value;
+            var produtos = document.getElementById('produtos').value;
+            var quantidade = document.getElementById('quantidade').value;
+
+            
+            if (!meioPagamento || !produtos || !quantidade) {
+                alert("Por favor, preencha todos os campos!");
+                return false;
+            }
+
+            
+            document.getElementById('mensagemConfirmacao').style.display = 'block';
+           
+            document.getElementById('formularioCompra').style.display = 'none';
+
+            return false;
+        }
+    </script>
+    <style>
+        #mensagemConfirmacao {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Compra</h1>
+    <div id="formularioCompra">
+        <form onsubmit="return enviarFormulario();">
+            <label for="meioPagamento">Meio de Pagamento:</label>
+            <input type="text" id="meioPagamento" name="meioPagamento" required><br>
+
+            <label for="produtos">Produtos:</label>
+            <input type="text" id="produtos" name="produtos" required><br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required><br>
+
+            <input type="submit" value="Comprar">
+        </form>
+    </div>
+    <div id="mensagemConfirmacao">
+        <h2>Confirmação da Compra</h2>
+        <p>Seu pedido foi enviado com sucesso!</p>
+        <p>Em breve, você receberá um e-mail de confirmação.</p>
+        <p>Muito obrigado pela sua compra!</p>
+    </div>
+    <footer>
+        <p>Entre em contato conosco:</p>
+        <ul>
+            <li>Endereço: SPF 34 CONJ Y LOT 445</li>
+            <li>Telefone: (11)3456-7287</li>
+            <li>E-mail: titanic@hotmial.com</li>
+        </ul>
+    </footer>
+</body>
+</html>
